@@ -16,7 +16,7 @@ app.use(morgan("dev"))
 app.get("/", (req, resp) => {
     resp.send("<h1>Server Start</h1>")
 })
-
+app.get("/api/v1/auth/register", require("./routes/userRoute"))
 
 app.listen(PORT, () => {
     console.log(`Server Start ${PORT}`.bgRed.white);

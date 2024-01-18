@@ -17,5 +17,11 @@ const userSchema = new mongoose.Schema({
         require: [true, "please fill all the data"],
         min: 6,
         max: 20
+    },
+    role: {
+        type: String,
+        default: true
     }
-})
+}, { timestamps: true });
+
+module.exports = mongoose.Schema("User", userSchema)
